@@ -1,0 +1,50 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Main page</title>
+     <link rel="stylesheet" href="portcss.css">
+        </head>
+          <body>
+            <header>
+            
+            <nav class="navlist">
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="mailto:melissa.20230213@iit.ac.lk"><img src="mail.png" class="mail"></a></li>
+                    <li><a href="https://www.instagram.com/meljoannee/"><img src="ig.png" class="mail"></a></li>
+            
+                </ul>
+            </nav>
+            </header>
+            <hr>
+            <form id="newsletter-form" action="subscribe" method="post">
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Stay updated with my latest projects and insights!</p>
+                
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <input type="button" id="button" name="gender" required>
+                    <label for="male">male</label>
+                    <label for="Female">Female</label>
+                  </div>
+                
+                <div class="form-group">
+                  <input type="checkbox" id="checkbox" name="agree" required>
+                  <label for="agree">I agree to receive newsletters and can unsubscribe at any time.</label>
+                </div>
+
+                
+                <button type="submit">Subscribe</button>
+              </form>

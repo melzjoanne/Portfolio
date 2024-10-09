@@ -1,73 +1,346 @@
+/**@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');**/
 
-          
-            .navlist{
-                display:inline;
-                padding: 20px;
-                font-size: 1.7em
-                
-                
-                }
-            .nav-ul{
-                display: flex;
-                justify-content: flex-end;
-                list-style-type: none;
-               
-            }
-                
-            .nav-ul li{
-                margin-left: 1.6rem;
-               }
-            .nav-ul a{
-                text-decoration:none;
-                transform: scale(2,3);
-            }
-                
-              
-                
-            
-            /**.transparent{
-                background-color: blue;
-                opacity: 0.5;
-                color:white;
-                text-align: center;}**/
-                
-             .grad{
-                background-image: linear-gradient(blue,white);
-                font-size: 40px;
-            }
-            .shadow{
-                color:white;
-                text-shadow: 1px 1px 2px black,0 0 25px blue,0 0 5px darkblue;
-                text-align: left;
-                font-size: 45px;
-            }
-            .mail{
-                width: 25px;
-                height: auto;
-            }
-            .my-img{
-                float:right;
-                margin-left: 20px;
-                width: 500px;
-            }
-            .text{
-                flex-grow:1;
-                font-size: 24px;
-                font-weight: bold;
-                text-align: center;
-            }
-            .button{
-                background-color: #4169E1;
-                text-align: center;
-                color: white;
-                text-decoration: none;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-                border:none;
-                transition-timing-function: ease;
-                transition: font-size 0.3s;
-            }
-           
-            .button:hover{
-               background-color: lightblue;
-               font-size: 1.2em;
-            }
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLDz8Z1JlFd2JQEl8qw.woff2) format('woff2');}
+
+    :root {
+    --primary-color: #647fd8;
+    --secondary-color: #c4b6d5;
+    --text-color: #333;
+    --background-color: #f0f8ff;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/**.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;**/
+
+
+header {
+    background: linear-gradient(130deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.navlist {
+    padding: 1rem 0;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-ul li {
+    margin: 0 0.5rem;
+    white-space: nowrap;
+}
+
+.nav-ul a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.nav-ul a:hover{
+    color:blue;
+}
+a:active{
+    color:black;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shadow {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: left;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.mail {
+    width: 1.5rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+.my-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/**.text {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}**/
+
+.button {
+    display: inline-block;
+    background-color: #4169E1;
+    color: white;
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    text-decoration: none;
+    padding: 0.7em 1.2em;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.button:hover {
+    background-color: lightblue;
+    transform: scale(1.05);
+}
+
+.blog-post {
+    background-color: white;
+    border: 1px solid #4682b4;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post-meta {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.first p::first-letter {
+    color: #007BFF;
+    font-size: 2.1em;
+    font-weight: bold;
+}
+
+p:not(.blog-post) {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    border-radius: 50%;
+    animation-duration: 40s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+.circle1 {
+    background-color: rgba(255, 192, 203, 0.5);
+    animation-name: movecircle1;
+}
+
+.circle2 {
+    background-color: rgba(221, 160, 221, 0.5);
+    animation-name: movecircle2;
+}
+
+.circle3 {
+    background-color: rgba(221, 160, 221, 0.5);
+    animation-name: movecircle3;
+}
+
+@keyframes movecircle1 {
+    0%   {transform: translate(0, 0)}
+    25%  {transform: translate(25vw, 25vh)}
+    50%  {transform: translate(50vw, -25vh)}
+    75%  {transform: translate(75vw, 25vh)}
+    100% {transform: translate(0, 0)}
+}
+
+@keyframes movecircle2 {
+    0%  {transform: translate(25vw, 25vh)}
+    25%  {transform: translate(50vw, 50vh)}
+    50%  {transform: translate(75vw, 10vh)}
+    75%  {transform: translate(0, 0)}
+    100% {transform: translate(10vw, 50vh)}
+}
+
+@keyframes movecircle3 {
+    0%  {transform: translate(40vw, 30vh)}
+    25%  {transform: translate(50vw, 60vh)}
+    50%  {transform: translate(60vw, 10vh)}
+    75%  {transform: translate(0, 0)}
+    100% {transform: translate(10vw, 50vh)}
+}
+
+@media (max-width: 768px) {
+    .navlist {
+        padding: 0.5rem 0;
+    }
+
+    .nav-ul {
+        justify-content: flex-start;
+    }
+
+    main {
+        padding: 1rem 0;
+    }
+
+    .blog-post {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+    }
+
+    .shadow {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .text {
+        font-size: clamp(1.1rem, 5vw, 1.5rem);
+    }
+
+    p:not(.blog-post){
+        font-family: 'Courier New', Courier, monospace;
+}
+}
+#newsletter-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #newsletter-form h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #newsletter-form p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #newsletter-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  #newsletter-form input[type="text"],
+  #newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #newsletter-form input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  #newsletter-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #newsletter-form button:hover {
+    background-color: #0056b3;
+  }
+  footer {
+    flex-shrink: 0; 
+    background-color: var(--primary-color);
+    margin-top: auto;
+    }
+    .footer-button {
+        background-color:white;
+        color: blue;
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 5px 10px; /* Padding inside button */
+        cursor: pointer; /* Pointer on hover */
+        margin-inline-start: auto;
+       
+       
+    }
+    
+
+
+
+
