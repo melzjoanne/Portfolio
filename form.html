@@ -27,7 +27,7 @@
                 
                 <div class="form-group">
                   <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required placeholder="Your Name">
+                  <input type="text" id="name" name="name" required pattern="[a-zA-Z]" placeholder="Enter letters only">
                 </div>
                 
                 <div class="form-group">
@@ -37,13 +37,20 @@
               
             
                 
+               
                 <div class="form-group">
+                  Gender: <br>
+                  <input type="radio" id="radio" name="gender" required> Male 
+                  <input type="radio" id="radio" name="gender" required> Female </div>
+                  <div class="form-group">
                   <input type="checkbox" id="checkbox" name="agree" required>
                   <label for="agree">I agree to receive newsletters and can unsubscribe at any time.</label>
                 </div>
 
+                  
+
                 
-                <button type="submit">Subscribe</button>
+                <button type="submit">Subscribe</button> </div>
               </form>
 
               <footer>
