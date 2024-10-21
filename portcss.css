@@ -110,7 +110,6 @@ a:active {
     width: 1.5rem;
     height: auto;
     vertical-align: middle;
-
 }
 
 /* Home button style*/
@@ -126,7 +125,7 @@ a:active {
     border-radius: 6px;
     transition: all 0.3s ease;
     margin-bottom: 1rem;
-    margin-left: 4%;
+    margin-left: 50px;
 }
 
 .home-button:hover {
@@ -152,9 +151,8 @@ a:active {
 }
 
 /*First letter styling*/
-.first p::first-letter {
-    color: #007BFF;
-    font-size: 2.1em;
+p::first-letter {
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -421,7 +419,6 @@ input:valid {
     width: 100%;
     padding: 10px;
     background-color: #704a77;
-    ;
     color: white;
     border: none;
     border-radius: 4px;
@@ -449,7 +446,6 @@ footer {
     padding: 2%;
     flex-wrap: wrap;
     flex-shrink: 0;
-    background-color: white;
     margin-top: auto;
     background-color: #ce9bd8;
     opacity: 0.6;
