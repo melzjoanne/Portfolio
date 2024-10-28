@@ -309,17 +309,6 @@ div>span{
         font-family: courier
     }
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-    
-}
-table th{
-    text-align: left;
-
-}
-
-
 /*newsletter form styles*/
 #newsletter-form {
     max-width: 400px;
