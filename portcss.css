@@ -147,6 +147,8 @@ p:not(.blog-post) {
 h2:first-of-type{
     background: linear-gradient(130deg, rgb(168, 105, 168), white);
 }
+
+
 /* Header for the blog pages*/
 .blog-header {
     text-align: center;
@@ -195,8 +197,22 @@ div>span{
     height: auto;
     vertical-align: middle;
 }
-
-
+.blog-post p::before{
+    content: "Content - ";  
+}
+.blog-post p::after{
+    content: "...";  
+}
+aside {
+    width: 30%;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    float: left;
+    font-style: italic;
+    background-color: rgb(165, 115, 165);
+}
 /*Animated background circles*/
 .circle {
     width: 100px;
@@ -352,6 +368,10 @@ div>span{
 input:valid {
     background-color: rgb(217, 200, 217);
     border: 2px rgb(139, 97, 139);
+}
+input:invalid{
+    background-color: rgb(218, 196, 196);
+    border: rgb(156, 75, 75);
 }
 
 /* Newsletter form button*/
