@@ -82,6 +82,10 @@ main {
     vertical-align: middle;
 }
 
+a[target] {
+    border:#1c131d;
+}
+
 /* Home button style*/
 .home-button {
     width: 300px;
