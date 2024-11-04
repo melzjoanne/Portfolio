@@ -191,6 +191,7 @@ div>span {
     margin-right: 10px;
     color: #555;
 }
+
 h2+p {
     color: #5f2d69;
 }
@@ -324,72 +325,6 @@ aside {
     }
 }
 
-/** responsiveness for mobile devices*/
-@media (max-width: 768px) {
-    .navlist {
-        padding: 0.5rem 0;
-    }
-
-    .nav-ul a {
-        justify-content: flex-start;
-    }
-
-    main {
-        padding: 1rem 0;
-    }
-
-    .blog-post {
-        padding: 1rem;
-        margin-top: 1rem;
-    }
-
-    footer {
-        flex-direction: column;
-
-    }
-}
-
-/*mobile responsiveness for small screens*/
-@media (max-width: 600px) {
-    body {
-        padding: 5px;
-    }
-
-    .content {
-        padding: 10px;
-
-    }
-}
-
-/*responsiveness for very small screens*/
-@media (max-width: 480px) {
-    body {
-        font-size: 18px;
-    }
-
-    header {
-        padding: 0.5rem 0;
-    }
-
-    .button {
-        display: block;
-        width: 100%;
-    }
-
-    .shadow {
-        font-size: 2.5rem;
-    }
-
-    .text {
-        font-size: 1.2rem;
-    }
-
-    p:not(.blog-post) {
-        font-family: courier
-    }
-
-}
-
 /*newsletter form styles*/
 #newsletter-form {
     max-width: 400px;
@@ -494,4 +429,71 @@ footer {
 
 p:not(.footer-button) {
     font-family: courier;
+}
+
+
+/** responsiveness for mobile devices*/
+@media (min-width:601px)and(max-width: 768px) {
+    .navlist {
+        padding: 0.5rem 0;
+    }
+
+    .nav-ul a {
+        justify-content: flex-start;
+    }
+
+    main {
+        padding: 1rem 0;
+    }
+
+    .blog-post {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+
+    }
+}
+
+/*mobile responsiveness for small screens*/
+@media (min-width:481px) and (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .content {
+        padding: 10px;
+
+    }
+}
+
+/*responsiveness for very small screens*/
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+    }
+
+    .shadow {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    p:not(.blog-post) {
+        font-family: courier
+    }
+
 }
