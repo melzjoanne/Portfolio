@@ -41,7 +41,6 @@ header {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
-
 .nav-ul li {
     margin: 0 0.5rem;
     white-space: nowrap;
@@ -472,7 +471,7 @@ p:not(.footer-button) {
 /*responsiveness for very small screens*/
 @media (max-width: 480px) {
     body {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     header {
