@@ -11,14 +11,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: clamp(16px, 2.5vw, 18px);
+    font-size: 18px;
 }
 
 .container {
     display: grid;
     padding: 50px;
 }
-
 
 header {
     background: linear-gradient(130deg, #5f2d69, black);
@@ -54,14 +53,12 @@ header {
     color: white;
     transition: color 0.3s ease;
     padding: 0.5rem;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: 1.2rem;
 }
 
 .nav-ul a:hover {
     color: rgb(165, 115, 165);
 }
-
-
 
 main {
     flex-grow: 1;
@@ -75,7 +72,7 @@ main {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px #5f2d69, 0 0 5px darkblue;
     text-align: left;
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-size: 2.6rem;
     margin-bottom: 1rem;
 }
 
@@ -92,7 +89,7 @@ main {
     background-color: #704a77;
     color: white;
     text-align: center;
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: 1.2rem;
     text-decoration: none;
     padding: 0.7em 1.2em;
     border: none;
@@ -126,7 +123,7 @@ main {
 
 /* publish info style*/
 .info {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: 0.9rem;
     color: #666;
     margin-bottom: 0.75rem;
 }
@@ -140,7 +137,7 @@ p::first-letter {
 /*paragraph style excluding blogpost*/
 p:not(.blog-post) {
     font-family: sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -162,7 +159,7 @@ h2:first-of-type {
 
 /* title for the blog pages*/
 .title {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 10px;
 }
@@ -194,6 +191,9 @@ div>span {
     margin-right: 10px;
     color: #555;
 }
+h2+p {
+    color: #5f2d69;
+}
 
 /*blog images*/
 .blog-img {
@@ -210,9 +210,10 @@ div>span {
     content: "...";
 }
 
-.tool-card p::after {
+.tool-card h2::after {
     content: " - generated content";
-    color: #97819b;
+    color: #6d5571;
+    font-size: 1rem;
 }
 
 /*Subscription in blog post page*/
@@ -329,7 +330,7 @@ aside {
         padding: 0.5rem 0;
     }
 
-    .nav-ul {
+    .nav-ul a {
         justify-content: flex-start;
     }
 
@@ -376,11 +377,11 @@ aside {
     }
 
     .shadow {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        font-size: 2.5rem;
     }
 
     .text {
-        font-size: clamp(1.1rem, 5vw, 1.5rem);
+        font-size: 1.2rem;
     }
 
     p:not(.blog-post) {
@@ -492,7 +493,5 @@ footer {
 }
 
 p:not(.footer-button) {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: courier;
 }
-
-
